@@ -1,0 +1,4 @@
+.home-containe {
+    display: grid;
+    grid-template-columns: 3rf 1fr;
+}
