@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Books from '../../Books/Books';
 import useBooks from '../../hooks/useBooks';
 import Cart from '../Cart/Cart';
@@ -6,6 +6,29 @@ import './Home.css';
 
 const Home = () => {
     const [books, setBooks] = useBooks();
+    const [cart, setCart] = useState([]);
+
+    const handleAddToCart = (selectedItem) => {
+        const exists = cart.find(book => book.id === selectedItem.id);
+        if (!exists) {
+            const newCart = [...cart, selectedItem]
+            setCart(newCart)
+
+        }
+        else {
+            alert('Item already added');
+        }
+
+    }
+
+    const handleRemoveFromcart = (selectedItem) => {
+        const rest = cart.filter(book => book.id !== selectedItem.id);
+        setCart(rest);
+
+    }
+
+
+
     return (
         <div className='home-container'>
 
@@ -13,12 +36,16 @@ const Home = () => {
                 {
                     books.map(book => <Books
                         key={book.id}
-                        book={book}>
-                    </Books>)
+                        book={book}
+                        handleAddToCart={handleAddToCart}
+
+                    ></Books>)
                 }
             </div>
             <div className='cart-container'>
-                <Cart></Cart>
+                <Cart
+                    handleRemoveFromcart={handleRemoveFromcart}
+                    cart={cart}></Cart>
 
             </div>
 

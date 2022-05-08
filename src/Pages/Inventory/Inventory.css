@@ -1,6 +1,6 @@
 .container {
-    width: 500px;
-    height: 600px;
+    width: 600px;
+    height: 800px;
     border: 1px solid #95A0A7;
     box-sizing: border-box;
     border-radius: 8px;
@@ -11,12 +11,32 @@
     color: white;
 }
 
+.form-container {
+    width: 560px;
+}
+
+.form {
+    width: 280px;
+    border: 2px solid goldenrod;
+    padding: 10px;
+    align-items: center;
+    margin-left: 115px;
+
+}
+
+.form:hover {
+    background-color: #424242;
+}
+
 .form-title {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
+.ml {
+    margin-left: 3px;
+}
 
 
 @media screen and (max-width:1100px) {

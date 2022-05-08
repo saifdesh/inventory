@@ -40,15 +40,19 @@ const Inventory = () => {
         setProducts([...products]);
 
     }
+
+
+
+
     return (
         <div>
 
             <h4 className='form-title'>Product Inventory form</h4>
             <div className='container'>
-                <div>
-                    <Form className='form' onSubmit={add} ref={formData}>
+                <div className='form-container'>
+                    <Form className='form text-center mb-3 mt-3' onSubmit={add} ref={formData}>
                         <Form.Group className="mb-3" controlId="formBasicProductName">
-                            <Form.Label className='input-group'>Product Name</Form.Label>
+                            <Form.Label>Product Name</Form.Label>
                             <Form.Control type="text" placeholder="Enter the Product Name" name="product_name" />
 
                         </Form.Group>
@@ -88,8 +92,9 @@ const Inventory = () => {
                                                 <td>{product.price}</td>
                                                 <td>{product.qty}</td>
                                                 <td>
-                                                    <Button variant='success' onClick={event => increQty(event)} value={index} >+</Button>
-                                                    <Button variant='danger' onClick={event => decreQty(event)} value={index}>-</Button>
+                                                    <Button className='ml' variant='success' onClick={event => increQty(event)} value={index} >+</Button>
+                                                    <Button className='ml' variant='danger' onClick={event => decreQty(event)} value={index}>-</Button>
+
                                                 </td>
                                             </tr>
                                         )
