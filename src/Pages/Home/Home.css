@@ -1,4 +1,10 @@
-.home-containe {
+.home-container {
     display: grid;
-    grid-template-columns: 3rf 1fr;
+    grid-template-columns: 3fr 1fr;
+}
+
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }

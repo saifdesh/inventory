@@ -1,0 +1,18 @@
+.book {
+    height: 380px;
+    border: 1px solid rgb(136, 134, 134);
+    margin-top: 25px;
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+.book img {
+    height: 220px;
+}
+
+.bg-dark:hover {
+
+    color: orangered;
+}

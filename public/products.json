@@ -2,7 +2,7 @@
   {
     "id": 1,
     "category": "A Noval of British History",
-    "name": "A Noval View of British History",
+    "name": "British History",
     "price": 50,
     "stock": 10,
     "ratings": 4,
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "category": "Weather",
-    "name": "Gone With The Wind",
+    "name": "The Wind",
     "price": 50,
     "stock": 10,
     "ratings": 4,
@@ -104,18 +104,6 @@
     "ratings": 4,
     "ratingsCount": 3725,
     "img": "https://i.ibb.co/9rRcrtR/09.jpg",
-    "shipping": 1,
-    "quantity": 0
-  },
-  {
-    "id": 10,
-    "category": "List Story",
-    "name": "My Little Life",
-    "price": 50,
-    "stock": 10,
-    "ratings": 4,
-    "ratingsCount": 3725,
-    "img": "https://i.ibb.co/BV0SKCw/10.jpg",
     "shipping": 1,
     "quantity": 0
   }

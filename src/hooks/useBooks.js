@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react"
 
 const useBooks = () => {
-    const [count, setCounts] = useState([]);
+    const [books, setBooks] = useState([]);
 
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
-            .then(data => setCounts(data));
+            .then(data => setBooks(data));
 
     }, []);
 
-    return [count, setCounts];
+    return [books, setBooks];
 
 }
 
