@@ -32,31 +32,32 @@ const Login = () => {
                     <h4 className='form-title'>Login please ..</h4>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control className='input-group' type="email" placeholder="Enter email" />
+                            {/* <Form.Label>Email address</Form.Label> */}
+                            <Form.Control className='input-group' type="email" placeholder="Enter email" required />
 
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control className='input-group' type="password" placeholder="Password" />
+                            {/* <Form.Label>Password</Form.Label> */}
+                            <Form.Control className='input-group' type="password" placeholder="Password" required />
                         </Form.Group>
 
                         <Button className='form-submit' variant="primary" type="submit">
                             Submit
                         </Button>
                     </Form>
-                    For New user ->> <Link className='form-link' to='/signup'>Plz create an account</Link>
+                    For New user <Link className='form-link' to='/signup'>Plz create an account</Link>
 
 
 
 
                 </div>
+                {/* <h1> OR</h1>
 
                 <div>
                     <Button className='form-submit' onClick={handleGoogleSignIn}>
                         <img src={img} /> Google sign in</Button>
-                </div>
+                </div> */}
 
             </div>
 

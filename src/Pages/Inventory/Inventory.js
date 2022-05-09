@@ -49,7 +49,7 @@ const Inventory = () => {
 
             <h4 className='form-title'>Product Inventory form</h4>
             <div className='container'>
-                <div className='form-container'>
+                <div className='container-form'>
                     <Form className='form text-center mb-3 mt-3' onSubmit={add} ref={formData}>
                         <Form.Group className="mb-3" controlId="formBasicProductName">
                             <Form.Label>Product Name</Form.Label>
