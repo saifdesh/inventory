@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import app from '../../firebase.init';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import img from '../../google.png';
+import './Login.css';
+import { Link } from 'react-router-dom';
 
 
 const auth = getAuth(app);
@@ -15,7 +17,7 @@ const Login = () => {
         signInWithPopup(auth, provider)
             .then(result => {
                 const user = result.user;
-                setUser(user);
+
                 console.log(user);
             })
             .catch(error => {
@@ -23,13 +25,42 @@ const Login = () => {
             })
     }
     return (
-        <div>
-            <h2>this login</h2>
+        <div className='form-container'>
 
-            <Button onClick={handleGoogleSignIn}>
-                <img src={img} /> Google sign in</Button>
-            <p>Name: {user.displayName}</p>
-            <img src={user.photoURL} height="30" width="30" />
+            <div>
+                <div >
+                    <h4 className='form-title'>Login please ..</h4>
+                    <Form>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control className='input-group' type="email" placeholder="Enter email" />
+
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control className='input-group' type="password" placeholder="Password" />
+                        </Form.Group>
+
+                        <Button className='form-submit' variant="primary" type="submit">
+                            Submit
+                        </Button>
+                    </Form>
+                    For New user ->> <Link className='form-link' to='/signup'>Plz create an account</Link>
+
+
+
+
+                </div>
+
+                <div>
+                    <Button className='form-submit' onClick={handleGoogleSignIn}>
+                        <img src={img} /> Google sign in</Button>
+                </div>
+
+            </div>
+
+
 
 
         </div>
